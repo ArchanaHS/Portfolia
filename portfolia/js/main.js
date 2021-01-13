@@ -6,48 +6,26 @@ $(document).ready(function(){
     $("#place").click(function(){
         open('index.html');
      });
-    
-    var $a=$('.a'),
-     $b=$('.b'),
-     $c=$('.c'),
-     $d=$('.d'),
-     $con=$('.con'),
-     $about=$('.about'),
-     $gallery=$('.gallery'),
-     $contact=$('.contact');
-     
 
-     
-
-     $a.click(function(){
-         $con.fadeIn();
-         $about.fadeOut();
-         $gallery.fadeOut();
-         $contact.fadeOut();
-     });
-     $b.click(function(){
-         $con.fadeOut();
-         $about.fadeIn();
-         $gallery.fadeOut();
-         $contact.fadeOut();
-     });
-    $c.click(function(){
-        $con.fadeOut();
-         $about.fadeOut();
-         $gallery.fadeIn();
-         $contact.fadeOut();
-
-
-    });
-    $d.click(function(){
-        $con.fadeOut();
-         $about.fadeOut();
-         $gallery.fadeOut();
-         $contact.fadeIn();
-
-    });
-    
+   
 
 });
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
 
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
 

@@ -221,11 +221,6 @@
                         INFORMATION ACCESS IN MEDICAL FIELD.</p><br>
 
 
-
-
-
-
-
                             <h3><i class="fab fa-product-hunt"></i>&nbsp;&nbsp;<b>Project.</b></h3>
                             <br>
                             <br>
@@ -289,7 +284,8 @@
       </div>
     </div>
     <hr class="w3-opacity">
-    <form action="?" target="_blank">
+
+    <form action="?" method="post">
       <div class="w3-section">
         <label>Name</label>
         <input class="w3-input w3-border" type="text" name="Name" required>
@@ -302,8 +298,54 @@
         <label>Message</label>
         <input class="w3-input w3-border" type="text" name="Message" required>
       </div>
-      <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
+      <input type="submit" name="submit">
     </form>
+    <?php
+
+    function getNextIncrement($table) {
+    global $conn, $portfolia;
+    $next_increment = 1;
+    $table = mysqli_escape_string($conn, $table);
+    $sql = "SELECT AUTO_INCREMENT FROM sendmessage.TABLES WHERE id = '$portfolia' AND sendmessage = '$table'";
+    $results = $conn->query($sql);
+    while($row = $results->fetch_assoc()) {
+        $next_increment = $row['AUTO_INCREMENT'];
+    }
+    return $next_increment;
+}
+//post  method.
+if(isset($_POST['Name'])){
+$Name=$_POST['Name'];
+
+}
+if(isset($_POST['Email'])){
+	$Email=$_POST['Email'];
+}
+if(isset($_POST['Message'])){
+	$Message=$_POST['Message'];
+}
+
+
+
+$conn= new mysqli("localhost","root","","portfolia");
+if ($conn-> connect_error) {
+echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+  
+}
+if(isset($_POST['submit'])){
+	$stmt=$conn->prepare("insert into sendmessage(Name,Email,Message)values(?,?,?)");
+	$stmt->bind_param("sss",$Name,$Email,$Message);
+	$stmt->execute();
+	echo "registration successuffully.";
+	$stmt->close();
+	$conn->close();
+
+}
+	
+
+
+?>
+
   </div>
            
 

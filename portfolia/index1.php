@@ -221,11 +221,6 @@
                         INFORMATION ACCESS IN MEDICAL FIELD.</p><br>
 
 
-
-
-
-
-
                             <h3><i class="fab fa-product-hunt"></i>&nbsp;&nbsp;<b>Project.</b></h3>
                             <br>
                             <br>
@@ -289,6 +284,7 @@
       </div>
     </div>
     <hr class="w3-opacity">
+
     <form action="?" target="_blank">
       <div class="w3-section">
         <label>Name</label>
@@ -302,8 +298,9 @@
         <label>Message</label>
         <input class="w3-input w3-border" type="text" name="Message" required>
       </div>
-      <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
+      <input type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
     </form>
+
   </div>
            
 

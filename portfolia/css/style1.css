@@ -3,67 +3,19 @@
     padding: 0;
 }
 html,body{
+   /*background: url(../images/acchu10.png) no-repeat center center fixed;*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     width: 100%;
     height: 100%;
     font-size: 14px;
     font-weight: normal;
 }
-.background{
-    
-    background-image: url(../images/acchu10.png);
-    background-repeat: no-repeat;
-    background-size:cover;
-    position: absolute;
-    overflow-y: auto;
-    width: 100%;
-    height: 100%;
-    
-    
-}
-.nav{
-    width:350px;
-    height: auto;
-    
-    position: absolute;
-    top: 20%;
-    left: 0;
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
-}
-.nav a{
-    text-decoration: none;
-    font-size: 28px;
-    font-family: Verdana;
-    font-weight: bold;
-    
-    display: inline-block;
-    height: 90px;
-    margin: 5px 0;
-   
-    background-color: rgb(15, 4, 4);
-    color: white;
-    line-height: 80px;
-    text-align: center;
-    transition: 300ms;
-}
-a.active,
-.nav a:hover{
-    background-color: white;
-    color: black;
-    width: 100%;
 
-}
-.a{
-    width: 95%;
-}
-.b{
-    width: 85%;
-}
-.c{
-    width: 80%;
-}
-.d{
-    width: 95%;
-}
 .content{
     width: 930px;
     min-height: 400px;
@@ -94,12 +46,15 @@ a.active,
     opacity: 0.6;
 }
 .about{
-    
-    
+    position: absolute;
+    float:left;
+    left:-300px;
+    width: 100%;
+    display: none;
     top: 25px;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: none;
+ 
 }
 .about p{
     font-size: 18px;
@@ -122,14 +77,14 @@ a.active,
     float: left;
     
 }
-.image img{
+ img{
     width: 100%;
     transition: all ease 0.5s;
     -webkit-transition: all ease 0.5s;
     transform: scale(1);
  
 }
-.image img:hover{
+img:hover{
     transform: scale(1.2);
     -webkit-transform: scale(1.2);
 }
@@ -138,6 +93,8 @@ a.active,
 }
  #img1{
     height: 220px;
+    float: left;
+    left: -200px;
 }
 
 #acchu1{
